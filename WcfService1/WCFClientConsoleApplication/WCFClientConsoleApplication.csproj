@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Discovery" />
   </ItemGroup>
@@ -47,9 +48,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WCFInterfaces\WCFInterfaces.csproj">
+    <ProjectReference Include="..\Client\Client.csproj">
+      <Project>{7CA91A4F-8D4B-4AC1-A284-1A8E738C868D}</Project>
+      <Name>Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WCFInterfaces\Interfaces.csproj">
       <Project>{E7749BE6-3394-4EA0-AB4E-8E053887A660}</Project>
-      <Name>WCFInterfaces</Name>
+      <Name>Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

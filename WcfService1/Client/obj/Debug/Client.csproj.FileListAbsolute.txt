@@ -1,0 +1,9 @@
+D:\github\Source\Repos\smart-services\WcfService1\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\github\Source\Repos\smart-services\WcfService1\Client\bin\Debug\Client.dll
+D:\github\Source\Repos\smart-services\WcfService1\Client\bin\Debug\Client.pdb
+D:\github\Source\Repos\smart-services\WcfService1\Client\bin\Debug\DataContracts.dll
+D:\github\Source\Repos\smart-services\WcfService1\Client\bin\Debug\WCFInterfaces.dll
+D:\github\Source\Repos\smart-services\WcfService1\Client\bin\Debug\DataContracts.pdb
+D:\github\Source\Repos\smart-services\WcfService1\Client\bin\Debug\WCFInterfaces.pdb
+D:\github\Source\Repos\smart-services\WcfService1\Client\obj\Debug\Client.dll
+D:\github\Source\Repos\smart-services\WcfService1\Client\obj\Debug\Client.pdb

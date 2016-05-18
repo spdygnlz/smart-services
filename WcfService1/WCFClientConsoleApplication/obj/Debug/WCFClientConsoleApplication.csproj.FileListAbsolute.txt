@@ -9,3 +9,10 @@ C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFClientCon
 D:\github\Source\Repos\smart-services\WcfService1\WCFClientConsoleApplication\bin\Debug\WCFClientConsoleApplication.exe.config
 D:\github\Source\Repos\smart-services\WcfService1\WCFClientConsoleApplication\obj\Debug\WCFClientConsoleApplication.exe
 D:\github\Source\Repos\smart-services\WcfService1\WCFClientConsoleApplication\obj\Debug\WCFClientConsoleApplication.pdb
+D:\github\Source\Repos\smart-services\WcfService1\WCFClientConsoleApplication\bin\Debug\WCFClientConsoleApplication.exe
+D:\github\Source\Repos\smart-services\WcfService1\WCFClientConsoleApplication\bin\Debug\WCFClientConsoleApplication.pdb
+D:\github\Source\Repos\smart-services\WcfService1\WCFClientConsoleApplication\bin\Debug\WCFInterfaces.dll
+D:\github\Source\Repos\smart-services\WcfService1\WCFClientConsoleApplication\bin\Debug\WCFInterfaces.pdb
+D:\github\Source\Repos\smart-services\WcfService1\WCFClientConsoleApplication\obj\Debug\WCFClientConsoleApplication.csprojResolveAssemblyReference.cache
+D:\github\Source\Repos\smart-services\WcfService1\WCFClientConsoleApplication\bin\Debug\Client.dll
+D:\github\Source\Repos\smart-services\WcfService1\WCFClientConsoleApplication\bin\Debug\Client.pdb

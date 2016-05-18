@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
+using System.Net.Security;
 using System.ServiceModel;
 
-namespace WCFInterfaces
+namespace SmartSystem.Interfaces
 {
-    [ServiceContract(CallbackContract = typeof(IMessageServiceCallback))]
+    [ServiceContract(CallbackContract = typeof(IMessageServiceCallback), Namespace = "http://david.leatham.com/MyService/2016/1", Name = "IMyService")]
     public interface IMyService
     {
         [OperationContract]
@@ -15,7 +15,7 @@ namespace WCFInterfaces
         List<string> GetAvailableServices();
     }
 
-    [ServiceContract]
+    [ServiceContract(Namespace = "http://david.leatham.com/MessageServiceCallback/2016/1", Name = "IMessageServiceCallback")]
     public interface IMessageServiceCallback
     {
         [OperationContract]
@@ -25,76 +25,5 @@ namespace WCFInterfaces
         void AnnounceNewService(string service);
     }
 
-    //[DataContract]
-    //public class SmartService
-    //{
-    //    [DataMember]
-    //    public string ServiceName { get; set; }
-
-    //    [DataMember]
-    //    public Guid Id { get; set; }
-
-    //    [DataMember]
-    //    public List<string> Commands { get; set; }
-
-    //    public SmartService(Guid id, string serviceName)
-    //    {
-    //        ServiceName = serviceName;
-    //        Commands = new List<string>();
-    //        Id = id;
-    //    }
-
-    //    public override string ToString()
-    //    {
-    //        return $"{ServiceName} ({Id}): {string.Join(", ", Commands)}";
-    //    }
-    //}
-
-    //[DataContract]
-    //public class SmartCommand
-    //{
-    //    public SmartCommand()
-    //    {
-    //        Parameters = new List<CommandParameter>();
-    //    }
-
-    //    [DataMember]
-    //    public Guid Id { get; set; }
-
-    //    [DataMember]
-    //    public string DisplayName { get; set; }
-
-    //    [DataMember]
-    //    public List<CommandParameter> Parameters { get; set; }
-    //}
-
-    //[DataContract]
-    //public class CommandParameter
-    //{
-    //    [DataMember]
-    //    public string DisplayName { get; set; }
-
-    //    [DataMember]
-    //    public int ParamType { get; set; }
-
-    //    [DataMember]
-    //    public object Value { get; set; }
-    //}
-
-    //[DataContract]
-    //public enum SmartType
-    //{
-    //    UInt,
-
-    //    Int,
-
-    //    Float,
-
-    //    Double,
-
-    //    String,
-
-    //    Guid
-    //}
 
 }

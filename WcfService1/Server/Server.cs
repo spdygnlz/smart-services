@@ -2,29 +2,10 @@
 using System.Collections.Generic;
 using System.ServiceModel;
 
-using WCFInterfaces;
+using SmartSystem.Interfaces;
 
-namespace WCFConsoleApplication
+namespace SmartSystem.CentralService
 {
-    public class Server
-    {
-        static void Main(string[] args)
-        {
-            using (var host = new ServiceHost(typeof(MyService)))
-            {
-                host.Open();
-                Console.WriteLine("The host is listening at:");
-                foreach (var item in host.Description.Endpoints)
-                {
-                    Console.WriteLine("{0}\n\t{1}", item.Address, item.Binding);
-                }
-
-                Console.WriteLine();
-                Console.ReadKey(true);
-            }
-        }
-    }
-
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant, InstanceContextMode = InstanceContextMode.Single)]
     public class MyService : IMyService
     {
@@ -39,12 +20,12 @@ namespace WCFConsoleApplication
             try
             {
                 // Get the client that is requesting to be registered
-                _callback = OperationContext.Current.GetCallbackChannel<IMessageServiceCallback>();                
+                _callback = OperationContext.Current.GetCallbackChannel<IMessageServiceCallback>();
 
                 // Get the commands this client supports
                 //var commands = _callback.GetCommands();
                 //smartService.Commands.AddRange(commands);
-                
+
                 _services.Add(clientName);
 
                 // tell all of the other clients that the new client/service is here

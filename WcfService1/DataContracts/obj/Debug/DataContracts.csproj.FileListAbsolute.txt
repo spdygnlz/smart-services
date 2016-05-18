@@ -1,0 +1,4 @@
+D:\github\Source\Repos\smart-services\WcfService1\DataContracts\bin\Debug\DataContracts.dll
+D:\github\Source\Repos\smart-services\WcfService1\DataContracts\bin\Debug\DataContracts.pdb
+D:\github\Source\Repos\smart-services\WcfService1\DataContracts\obj\Debug\DataContracts.dll
+D:\github\Source\Repos\smart-services\WcfService1\DataContracts\obj\Debug\DataContracts.pdb

@@ -9,3 +9,8 @@ C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFConsoleAp
 D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\WCFConsoleApplication.exe.config
 D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\obj\Debug\WCFConsoleApplication.exe
 D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\obj\Debug\WCFConsoleApplication.pdb
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\WCFConsoleApplication.exe
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\WCFConsoleApplication.pdb
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\WCFInterfaces.dll
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\WCFInterfaces.pdb
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\obj\Debug\WCFConsoleApplication.csprojResolveAssemblyReference.cache

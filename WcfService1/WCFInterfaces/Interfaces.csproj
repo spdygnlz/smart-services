@@ -7,7 +7,7 @@
     <ProjectGuid>{E7749BE6-3394-4EA0-AB4E-8E053887A660}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WCFInterfaces</RootNamespace>
+    <RootNamespace>SmartSystem.Interfaces</RootNamespace>
     <AssemblyName>WCFInterfaces</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -33,7 +33,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Discovery" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces.cs" />
