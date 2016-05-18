@@ -1,8 +1,0 @@
-C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFConsoleApplication\bin\Release\WCFConsoleApplication.exe.config
-C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFConsoleApplication\bin\Release\WCFConsoleApplication.exe
-C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFConsoleApplication\bin\Release\WCFConsoleApplication.pdb
-C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFConsoleApplication\bin\Release\WCFInterfaces.dll
-C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFConsoleApplication\bin\Release\WCFInterfaces.pdb
-C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFConsoleApplication\obj\Release\WCFConsoleApplication.csprojResolveAssemblyReference.cache
-C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFConsoleApplication\obj\Release\WCFConsoleApplication.exe
-C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFConsoleApplication\obj\Release\WCFConsoleApplication.pdb

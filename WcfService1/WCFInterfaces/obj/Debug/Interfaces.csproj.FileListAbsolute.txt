@@ -1,4 +1,5 @@
 D:\github\Source\Repos\smart-services\WcfService1\WCFInterfaces\bin\Debug\WCFInterfaces.dll
 D:\github\Source\Repos\smart-services\WcfService1\WCFInterfaces\bin\Debug\WCFInterfaces.pdb
+D:\github\Source\Repos\smart-services\WcfService1\WCFInterfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
 D:\github\Source\Repos\smart-services\WcfService1\WCFInterfaces\obj\Debug\WCFInterfaces.dll
 D:\github\Source\Repos\smart-services\WcfService1\WCFInterfaces\obj\Debug\WCFInterfaces.pdb
