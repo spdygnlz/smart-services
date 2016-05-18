@@ -1,0 +1,5 @@
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFInterfaces\bin\Release\WCFInterfaces.dll
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFInterfaces\bin\Release\WCFInterfaces.pdb
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFInterfaces\obj\Release\WCFInterfaces.csprojResolveAssemblyReference.cache
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFInterfaces\obj\Release\WCFInterfaces.dll
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFInterfaces\obj\Release\WCFInterfaces.pdb

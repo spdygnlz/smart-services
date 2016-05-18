@@ -1,0 +1,10 @@
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFClientConsoleApplication\bin\Release\WCFClientConsoleApplication.exe.config
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFClientConsoleApplication\bin\Release\WCFClientConsoleApplication.exe
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFClientConsoleApplication\bin\Release\WCFClientConsoleApplication.pdb
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFClientConsoleApplication\bin\Release\WCFConsoleApplication.exe
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFClientConsoleApplication\bin\Release\WCFInterfaces.dll
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFClientConsoleApplication\bin\Release\WCFConsoleApplication.pdb
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFClientConsoleApplication\bin\Release\WCFInterfaces.pdb
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFClientConsoleApplication\obj\Release\WCFClientConsoleApplication.csprojResolveAssemblyReference.cache
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFClientConsoleApplication\obj\Release\WCFClientConsoleApplication.exe
+C:\Users\leathada\Documents\Visual Studio 2015\Projects\WcfService1\WCFClientConsoleApplication\obj\Release\WCFClientConsoleApplication.pdb
