@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.ServiceModel;
+
+using DataContracts;
 
 using SmartSystem.Interfaces;
 
@@ -13,28 +16,42 @@ namespace SmartSystem.IndependentService
 
         private Guid _identifier;
 
-        //private Dictionary<Guid, SmartCommand> commands = new Dictionary<Guid, SmartCommand>();
+        private Dictionary<Guid, SmartCommand> commands = new Dictionary<Guid, SmartCommand>();
 
         public Client()
         {
             _identifier = Guid.NewGuid();
             Console.WriteLine($"Started new Client with instance ID: {_identifier}");
-            //ConfigureCommands();
+            ConfigureCommands();
         }
 
-        //private void ConfigureCommands()
-        //{
-        //    var command = new SmartCommand { DisplayName = "OpenBlinds", Id = Guid.NewGuid() };
-        //    var parameter = new CommandParameter { DisplayName = "Percentage", ParamType = 1 };
-
-        //    command.Parameters.Add(parameter);
-
-        //    commands.Add(command.Id, command);
-        //}
-
-        public List<string> GetCommands()
+        private void ConfigureCommands()
         {
-            return new List<string>() { "test 1", "Test 2" };// .Values.ToList();
+            var returnObj = new SmartReturnObject { Type = SmartType.Int };
+            var command = new SmartCommand((percent) => OpenBlinds((int)percent)) { DisplayName = "OpenBlinds", Id = Guid.NewGuid(), Return = returnObj};
+            var parameter = new CommandParameter { DisplayName = "Percentage", ParamType = SmartType.Int };
+            command.Parameters.Add(parameter);
+            commands.Add(command.Id, command);
+        }
+
+        private int OpenBlinds(int percentage)
+        {
+            Console.WriteLine($"Opening Blinds to {percentage} percent.");
+            return percentage;
+        }
+
+        public SmartReturnObject CallCommand(SmartCommand command)
+        {
+            var temp = commands[command.Id].LocalAction;
+            
+            var result = temp(command.Parameters.First().Value);
+            var retVal = new SmartReturnObject() { Type = command.Return.Type, Value = result };
+            return retVal;
+        }
+
+        public List<SmartCommand> GetCommands()
+        {
+            return commands.Values.ToList();
         }
 
         public void AnnounceNewService(string service)

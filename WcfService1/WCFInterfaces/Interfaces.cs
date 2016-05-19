@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Net.Security;
 using System.ServiceModel;
 
+using DataContracts;
+
 namespace SmartSystem.Interfaces
 {
     [ServiceContract(CallbackContract = typeof(IMessageServiceCallback), Namespace = "http://david.leatham.com/MyService/2016/1", Name = "IMyService")]
@@ -19,10 +21,13 @@ namespace SmartSystem.Interfaces
     public interface IMessageServiceCallback
     {
         [OperationContract]
-        List<string> GetCommands();
+        List<SmartCommand> GetCommands();
 
         [OperationContract]
         void AnnounceNewService(string service);
+
+        [OperationContract]
+        SmartReturnObject CallCommand(SmartCommand command);
     }
 
 

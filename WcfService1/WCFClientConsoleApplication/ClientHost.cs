@@ -40,9 +40,9 @@ namespace WCFClientConsoleApplication
 
         public void Method2()
         {
-            foreach (var binding in new Binding[] { new NetTcpBinding(), new WSDualHttpBinding() })
+            // foreach (var binding in new Binding[] { new NetTcpBinding(), new WSDualHttpBinding() })
             {
-                var endpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(IMyService)), binding);
+                var endpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(IMyService)), new NetTcpBinding());
 
                 client = new Client();
                 var ic = new InstanceContext(client);
@@ -62,65 +62,6 @@ namespace WCFClientConsoleApplication
         public void Close()
         {
             ((ICommunicationObject)client.Proxy).Close();
-        }
-
-
-        public void Method1()
-        {
-            discoveryClient = new DiscoveryClient(new UdpDiscoveryEndpoint());
-            
-            discoveryClient.FindProgressChanged += Client_FindProgressChanged;
-            discoveryClient.FindCompleted += ClientOnFindCompleted;
-            var criteria = new FindCriteria(typeof(IMyService)) { Duration = new TimeSpan(0, 0, 5) };
-
-            discoveryClient.FindAsync(criteria);
-        }
-
-        private void Client_FindProgressChanged(object sender, FindProgressChangedEventArgs e)
-        {
-            Console.WriteLine($"Found Endpoint at {e.EndpointDiscoveryMetadata.Address}");
-        }
-
-        private void ClientOnFindCompleted(object sender, FindCompletedEventArgs findCompletedEventArgs)
-        {
-            if (findCompletedEventArgs.Cancelled)
-            {
-                Console.WriteLine("Discovery Cancelled");
-            }
-            else if (findCompletedEventArgs.Error != null)
-            {
-                Console.WriteLine(findCompletedEventArgs.Error.Message);                
-            }
-            else
-            {
-                foreach (var item in findCompletedEventArgs.Result.Endpoints)
-                {
-                    Console.WriteLine(item.Address);
-                }
-
-                Console.WriteLine();
-
-                var address = findCompletedEventArgs.Result.Endpoints.First(ep => ep.Address.Uri.Scheme == "net.tcp").Address;
-
-                Console.WriteLine(address);
-
-                var client = new Client();
-                var ic = new InstanceContext(client);
-
-                var factory = new DuplexChannelFactory<IMyService>(ic, new NetTcpBinding(), address);
-
-                var proxy = factory.CreateChannel();
-
-                client.Proxy = proxy;
-
-                client.Register();
-
-                client.Discover();
-
-                ((ICommunicationObject)proxy).Close();
-            }
-
-            this.discoveryClient = null;
         }
     }
 

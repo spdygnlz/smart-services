@@ -1,80 +1,122 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataContracts
 {
-    //[DataContract]
-    //public class SmartService
-    //{
-    //    [DataMember]
-    //    public string ServiceName { get; set; }
+    [DataContract]
+    public class SmartService
+    {
+        [DataMember]
+        public string ServiceName { get; set; }
 
-    //    [DataMember]
-    //    public Guid Id { get; set; }
+        [DataMember]
+        public Guid Id { get; set; }
 
-    //    [DataMember]
-    //    public List<string> Commands { get; set; }
+        [DataMember]
+        public List<SmartCommand> Commands { get; set; }
 
-    //    public SmartService(Guid id, string serviceName)
-    //    {
-    //        ServiceName = serviceName;
-    //        Commands = new List<string>();
-    //        Id = id;
-    //    }
+        public SmartService(Guid id, string serviceName)
+        {
+            ServiceName = serviceName;
+            Commands = new List<SmartCommand>();
+            Id = id;
+        }
 
-    //    public override string ToString()
-    //    {
-    //        return $"{ServiceName} ({Id}): {string.Join(", ", Commands)}";
-    //    }
-    //}
+        public override string ToString()
+        {
+            return $"{ServiceName} ({Id}): {string.Join(", ", Commands)}";
+        }
+    }
 
-    //[DataContract]
-    //public class SmartCommand
-    //{
-    //    public SmartCommand()
-    //    {
-    //        Parameters = new List<CommandParameter>();
-    //    }
+    [DataContract]
+    public class SmartCommand
+    {
+        private readonly Func<object, object> _commandAction;
 
-    //    [DataMember]
-    //    public Guid Id { get; set; }
+        public SmartCommand()
+        {
+            Parameters = new List<CommandParameter>();
+            Return = null;
+        }
 
-    //    [DataMember]
-    //    public string DisplayName { get; set; }
+        public SmartCommand(Func<object, object> commandAction)
+            : this()
+        {
+            _commandAction = commandAction;
+        }
 
-    //    [DataMember]
-    //    public List<CommandParameter> Parameters { get; set; }
-    //}
+        public Func<object, object> LocalAction => _commandAction;
 
-    //[DataContract]
-    //public class CommandParameter
-    //{
-    //    [DataMember]
-    //    public string DisplayName { get; set; }
+        [DataMember]
+        public Guid Id { get; set; }
 
-    //    [DataMember]
-    //    public int ParamType { get; set; }
+        [DataMember]
+        public string DisplayName { get; set; }
 
-    //    [DataMember]
-    //    public object Value { get; set; }
-    //}
+        [DataMember]
+        public List<CommandParameter> Parameters { get; set; }        
 
-    //[DataContract]
-    //public enum SmartType
-    //{
-    //    UInt,
+        [DataMember]
+        public SmartReturnObject Return { get; set; }
 
-    //    Int,
+        public override string ToString()
+        {
+            string returnString = Return?.ToString() ?? string.Empty;
+            return $"{returnString} {DisplayName} ({string.Join(", ", Parameters)})".Trim();
+        }
+    }
 
-    //    Float,
+    [DataContract]
+    public class SmartReturnObject
+    {
+        [DataMember]
+        public SmartType Type { get; set; }
 
-    //    Double,
+        [DataMember]
+        public object Value { get; set; }
 
-    //    String,
+        public override string ToString()
+        {
+            return $"{Type}";
+        }
+    }
 
-    //    Guid
-    //}
+    [DataContract]
+    public class CommandParameter
+    {
+        [DataMember]
+        public string DisplayName { get; set; }
+
+        [DataMember]
+        public SmartType ParamType { get; set; }
+
+        [DataMember]
+        public object Value { get; set; }
+
+        public override string ToString()
+        {
+            return $"{ParamType} {DisplayName}";
+        }
+    }
+
+    [DataContract]
+    public enum SmartType
+    {
+        [EnumMember]
+        UInt,
+        [EnumMember]
+        Int,
+        [EnumMember]
+        Float,
+        [EnumMember]
+        Double,
+        [EnumMember]
+        String,
+        [EnumMember]
+        Guid
+    }
 }

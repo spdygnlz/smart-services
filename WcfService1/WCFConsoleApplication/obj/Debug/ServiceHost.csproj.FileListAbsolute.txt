@@ -1,1 +1,12 @@
 D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\WCFConsoleApplication.exe.config
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\WCFConsoleApplication.exe
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\WCFConsoleApplication.pdb
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\Server.dll
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\WCFInterfaces.dll
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\DataContracts.dll
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\Server.pdb
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\WCFInterfaces.pdb
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\bin\Debug\DataContracts.pdb
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\obj\Debug\ServiceHost.csprojResolveAssemblyReference.cache
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\obj\Debug\WCFConsoleApplication.exe
+D:\github\Source\Repos\smart-services\WcfService1\WCFConsoleApplication\obj\Debug\WCFConsoleApplication.pdb

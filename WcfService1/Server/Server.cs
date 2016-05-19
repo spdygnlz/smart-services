@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.ServiceModel;
+
+using DataContracts;
 
 using SmartSystem.Interfaces;
 
@@ -16,15 +19,15 @@ namespace SmartSystem.CentralService
 
         public bool RegisterClient(Guid id, string clientName)
         {
-            //var smartService = new SmartService(id, clientName);
+            var smartService = new SmartService(id, clientName);
             try
             {
                 // Get the client that is requesting to be registered
                 _callback = OperationContext.Current.GetCallbackChannel<IMessageServiceCallback>();
 
                 // Get the commands this client supports
-                //var commands = _callback.GetCommands();
-                //smartService.Commands.AddRange(commands);
+                var commands = _callback.GetCommands();
+                smartService.Commands.AddRange(commands);
 
                 _services.Add(clientName);
 
@@ -37,7 +40,12 @@ namespace SmartSystem.CentralService
                 // Add the new client to the list of known clients
                 _clients.Add(id, _callback);
 
-                Console.WriteLine("Server added {0} to the list.", clientName);
+                Console.WriteLine("Server added {0} to the list.", smartService);
+
+                SmartCommand command = commands.FirstOrDefault();
+                command.Parameters.First().Value = 42;
+                var result = _callback.CallCommand(command);
+                Console.WriteLine(result.Value);
             }
             catch (Exception ex)
             {
